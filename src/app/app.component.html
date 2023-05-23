@@ -1,0 +1,22 @@
+<app-nav-bar
+  [opened]="menuOpened"
+  (menuToggle)="setMenuStage($event)"
+></app-nav-bar>
+
+<div class="content-fluid">
+  <app-full-banner></app-full-banner>
+
+  <app-list-titles
+    title="Adicionando recentemente"
+    [list]="listTitles"
+  ></app-list-titles>
+  <app-list-titles title="Em alta" [list]="listTitles"></app-list-titles>
+  <app-list-titles
+    title="Continuar assitindo como DJALMA SINDEAUX"
+    [list]="listTitles"
+  ></app-list-titles>
+</div>
+
+<app-footer></app-footer>
+
+<div class="backdrop" (click)="closeMenu()" *ngIf="menuOpened"></div>
